@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>
+            Fiche de Renseignements
+        </title>
+    </head>
+    <body>
+        
+        <form method="POST">
+
+            <h2>Renseignements</h2>
+
+            <!-- 1er groupe de champ de formulaire -->
+
+            <fieldset>
+
+                <legend>Civilite</legend>
+
+                <!-- champ nom et prenom -->
+                <label for="name">Nom: </label>
+                <input type="text" id="name" name="name" placeholder="Entrer votre nom" tabindex="1" required/>
+
+                <label for="surname">Prenom: </label>
+                <input type="text" name="surname" id="surname" placeholder="Entrer votre prenom"/>
+
+                <br/>
+                <br/>
+
+                <!-- addresse mail et mot de passe -->
+                <label for="email">Adresse Mail: </label>
+                <input type="email" name="email" id="email" placeholder="Entrer votre email" tabindex="2" required/>
+
+                <label for="password">Mot de Passe: </label>
+                <input type="password" name="password" id="password" placeholder="Entrer votre mot de passe" tabindex="3" required/>
+
+                <br/>
+                <br/>
+
+                <!-- Sexe et age -->
+                <span>Sexe</span>
+                <input type="radio" name="sexe" id="man" />
+                <label for="man">Homme</label>
+
+                <input type="radio" name="sexe" id="women">
+                <label for="women">Femme</label>
+
+                <br/>
+                <br/>
+                <input type="color" name="" id="">
+
+                <label for="old">Age</label>
+                <input type="number" name="old" id="old" min="7" max="90">
+
+            </fieldset>
+
+            <!-- 2eme groupe de champ de formulaire -->
+
+            <fieldset>
+
+                <legend>formation</legend>
+
+                <!--champ select: derniers diplomes -->
+
+                <label for="degrees">Derniers Diplomes</label>
+                <select name="last_degree" id="degrees">
+                    <option value="none">Aucun</option>
+                    <option value="bac">Bac</option>
+                    <option value="bac-2">Bac +2</option>
+                    <option value="bac-3" selected>Bac +3</option>
+                    <option value="master">Master</option>
+                </select>
+
+                <br/>
+                <br/>
+
+                <!-- champ de case a cocher pour le centre d'interet -->
+
+                <p>Centre d'interet: </p>
+                <input type="checkbox" name="music" id="music"/>
+                <label for="music">Musique</label>
+
+                <input type="checkbox" name="sport" id="sport"/>
+                <label for="sport">Sport</label>
+
+                <input type="checkbox" name="lecture" id="lecture"/>
+                <label for="lecture">Lecture</label>
+                
+            </fieldset>
+
+            <!-- 3eme groupe de champ du formulaire -->
+
+            <fieldset>
+
+                <legend>Avis</legend>
+
+                <!-- le champ de commentaire -->
+
+                <label for="comment">Commentaire</label>
+                <br/>
+                <textarea name="comment" id="comment" cols="50" rows="10"></textarea>
+
+                <br/>
+                <br/>
+
+                <!-- les conditions d'utilisation -->
+
+                <input type="checkbox" name="term_of_use" id="status" required />
+                <label for="status">
+                    j'accepte de recevoir les informations supplementaires et nouveautes de la plateforme
+                </label>
+
+            </fieldset>
+
+            <br/>
+            
+            <button type="submit">Envoyer</button>
+
+        </form>
+
+    </body>
+</html>
