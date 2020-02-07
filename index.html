@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="assets/css/style.css">
         <title>
             Fiche de Renseignements
         </title>
@@ -16,84 +17,96 @@
 
             <!-- 1er groupe de champ de formulaire -->
 
-            <fieldset>
+            <fieldset class="fieldset_1">
 
                 <legend>Civilite</legend>
 
                 <!-- champ nom et prenom -->
-                <label for="name">Nom: </label>
-                <input type="text" id="name" name="name" placeholder="Entrer votre nom" tabindex="1" required/>
+                <section class="input__field">
+                    <label for="name">Nom </label> <br>
+                    <input type="text" id="name" name="name" placeholder="Entrer votre nom" required/>
+                </section>
 
-                <label for="surname">Prenom: </label>
-                <input type="text" name="surname" id="surname" placeholder="Entrer votre prenom"/>
-
-                <br/>
-                <br/>
+                <section class="input__field">
+                    <label for="surname">Prenom </label> <br>
+                    <input type="text" name="surname" id="surname" placeholder="Entrer votre prenom"/>
+                </section>
 
                 <!-- addresse mail et mot de passe -->
-                <label for="email">Adresse Mail: </label>
-                <input type="email" name="email" id="email" placeholder="Entrer votre email" tabindex="2" required/>
+                <section class="input__field">
+                    <label for="email">Adresse Mail </label> <br>
+                    <input type="email" name="email" id="email" placeholder="Entrer votre email" tabindex="2" required/>
+                </section>
 
-                <label for="password">Mot de Passe: </label>
-                <input type="password" name="password" id="password" placeholder="Entrer votre mot de passe" tabindex="3" required/>
-
-                <br/>
-                <br/>
+                <section class="input__field">
+                    <label for="password">Mot de Passe </label> <br>
+                    <input type="password" name="password" id="password" placeholder="Entrer votre mot de passe" tabindex="3" required/>    
+                </section>
 
                 <!-- Sexe et age -->
-                <span>Sexe</span>
-                <input type="radio" name="sexe" id="man" />
-                <label for="man">Homme</label>
+                <section class="sex">
 
-                <input type="radio" name="sexe" id="women">
-                <label for="women">Femme</label>
+                    <h4>Sexe</h4>
 
-                <br/>
-                <br/>
-                <input type="color" name="" id="">
+                    <div class="input__field">
+                        <input type="radio" name="sexe" id="man" />
+                        <label for="man">Homme</label>  
+                    </div>
 
-                <label for="old">Age</label>
-                <input type="number" name="old" id="old" min="7" max="90">
+                    <div class="input__field">
+                        <input type="radio" name="sexe" id="women">
+                        <label for="women">Femme</label>
+                    </div>
+
+                </section>
 
             </fieldset>
 
-            <!-- 2eme groupe de champ de formulaire -->
+            <!-- 2eme groupe de champ de formulaire -->         
 
-            <fieldset>
+            <fieldset class="fieldset_2">
 
                 <legend>formation</legend>
 
                 <!--champ select: derniers diplomes -->
 
-                <label for="degrees">Derniers Diplomes</label>
-                <select name="last_degree" id="degrees">
-                    <option value="none">Aucun</option>
-                    <option value="bac">Bac</option>
-                    <option value="bac-2">Bac +2</option>
-                    <option value="bac-3" selected>Bac +3</option>
-                    <option value="master">Master</option>
-                </select>
+                <section class="select__field">
 
-                <br/>
-                <br/>
+                    <label for="degrees">Derniers Diplomes: </label>
+
+                    <select name="last_degree" id="degrees">
+                        <option value="none">Aucun</option>
+                        <option value="bac">Bac</option>
+                        <option value="bac-2">Bac +2</option>
+                        <option value="bac-3" selected>Bac +3</option>
+                        <option value="master">Master</option>
+                    </select>
+
+                </section>
+
 
                 <!-- champ de case a cocher pour le centre d'interet -->
 
-                <p>Centre d'interet: </p>
-                <input type="checkbox" name="music" id="music"/>
-                <label for="music">Musique</label>
+                <section>
 
-                <input type="checkbox" name="sport" id="sport"/>
-                <label for="sport">Sport</label>
+                    <h4>Centre d'interet</h5>
 
-                <input type="checkbox" name="lecture" id="lecture"/>
-                <label for="lecture">Lecture</label>
+                    <input type="checkbox" name="music" id="music"/>
+                    <label for="music">Musique</label>
+
+                    <input type="checkbox" name="sport" id="sport"/>
+                    <label for="sport">Sport</label>
+
+                    <input type="checkbox" name="lecture" id="lecture"/>
+                    <label for="lecture">Lecture</label>
+
+                </section>
                 
             </fieldset>
 
             <!-- 3eme groupe de champ du formulaire -->
 
-            <fieldset>
+            <fieldset class="fieldset_3">
 
                 <legend>Avis</legend>
 
@@ -115,9 +128,9 @@
 
             </fieldset>
 
-            <br/>
+
+            <input type="submit" value="Envoyer">
             
-            <button type="submit">Envoyer</button>
 
         </form>
 
